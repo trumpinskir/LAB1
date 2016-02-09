@@ -75,12 +75,13 @@ int main(void)
                   break;
    
                 case wait:                      //waits until switch is released
-                    if(EXTERNAL==PRESSED)
+                    if(switchFlag==0)
                     {
                         state=wait;
                     }
                     else
                     {
+                        switchFlag=0;
                         state=debounceRelease;
                     }
                     break;
