@@ -104,7 +104,7 @@ int main(void)
 
 void __ISR(_CHANGE_NOTICE_VECTOR, IPL3SRS) _CNInterrupt(void){
     //TODO: Implement the interrupt to capture the press of the button
-    PORTG;
+    PORTA;
     IFS1bits.CNAIF=0;
     switchFlag=1;
 }
